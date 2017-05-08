@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Complex</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<SCRIPT>
+  function setup() {
+	document.getElementById("add").checked = true;
+  }
+  window.onload = setup;
+
+function complex() {
+   var addition = document.getElementById("add").checked;
+   var substraction = document.getElementById("sub").checked;
+   var multiply = document.getElementById("mul").checked;
+   var division = document.getElementById("div").checked;
+   var rn1 = parseFloat(document.getElementById("realNumber1").value);
+   var im1 = parseFloat(document.getElementById("imaginaryNumber1").value);
+   var rn2 = parseFloat(document.getElementById("realNumber2").value);
+   var im2 = parseFloat(document.getElementById("imaginaryNumber2").value);
+   var result;
+   if(addition) {
+     var rn = rn1 + rn2;
+	 var im = im1 + im2;
+	 var op
+	 if(im<0) {
+	 op="";
+	 }else {
+	 op="+";
+	 }
+	 result = "" + rn + op + im +"i";
+	 document.getElementById("answer").value = "SlothPI says the answer is: " + result;
+   }
+   if(substraction) {
+     var rn = rn1 - rn2;
+	 var im = im1 - im2;
+	 var op
+	 if(im<0) {
+	 op="";
+	 }else {
+	 op="+";
+	 }
+	 result = "" + rn + op + im +"i";
+	 document.getElementById("answer").value = "SlothPI says the answer is: " + result;
+   }
+   if(multiply==true) {
+     var rn = (rn1*rn2) - (im1*im2);
+	 var im = (rn1*im2) + (rn2*im1);
+	 var op
+	 if(im<0) {
+	 op="";
+	 }else {
+	 op="+";
+	 }
+	 result = "" + rn + op + im +"i";
+	 document.getElementById("answer").value = "SlothPI says the answer is: " + result;
+   }
+   if(division==true) {
+     var rn = ((rn1*rn2) + (im1*im2)) / (rn2*rn2 + im2*im2);
+	 var im = (-1*(rn1*im2) + (rn2*im1)) / (rn2*rn2 + im2*im2);
+	 var op
+	 if(im<0) {
+	 op="";
+	 }else {
+	 op="+";
+	 }
+	 result = "" + rn + op + im +"i";
+	 document.getElementById("answer").value = "SlothPI says the answer is: " + result;
+   }
+}
+</SCRIPT>
+
+<body>
+
+<div class="col-sm-12">
+<div class="container-fluid">
+  <h1>Complex Numbers with SlothPI</h1>
+</div>
+
+<div class="col-sm-6">
+  <div class="form-group">
+  <label for="realNumber1">Real Part Number 1:</label>
+  <input type="number" class="form-control" id="realNumber1">
+  </div>
+</div>
+
+<div class="col-sm-6">
+  <div class="form-group">
+  <label for="imaginaryNumber1">Imaginary Part Number 1:</label>
+  <input type="number" class="form-control" id="imaginaryNumber1">
+  </div>
+</div>
+
+<div class="col-sm-6">
+  <div class="form-group">
+  <label for="realNumber2">Real Part Number 2:</label>
+  <input type="number" class="form-control" id="realNumber2">
+  </div>
+</div>
+
+<div class="col-sm-6">
+  <div class="form-group">
+  <label for="imaginaryNumber2">Imaginary Part Number 2:</label>
+  <input type="number" class="form-control" id="imaginaryNumber2">
+  </div>
+</div>
+
+<div class="col-sm-12">
+<div class="form-group">
+  <form>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" id="add">Addition
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" id="sub">Substraction
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" id="mul">Multiplication
+    </label>
+	<label class="radio-inline">
+      <input type="radio" name="optradio" id="div">Division
+    </label>
+  </form>
+</div>
+</div>
+
+<div class="col-sm-12">
+<fieldset disabled>
+<div class="form-group">
+  <label for="answer">Answer:</label>
+  <input type="text" class="form-control" id="answer" placeholder="Complex math made easy with SlothPI">
+</div>
+</fieldset>
+</div>
+
+<div class="container-fluid">
+  <button type="button" class="btn btn-primary btn-block" id="buttonCalculate" onclick="complex()">Ask SlothPI</button>
+</div>
+
+</div>
+  
+</body>
+</html>

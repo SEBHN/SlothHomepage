@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Clock</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<script>
+  function clock() {
+    var time = new Date();
+    var hour = time.getHours();
+    var minute = time.getMinutes();
+    var second = time.getSeconds();
+	hour = checkZero(hour);
+    minute = checkZero(minute);
+    second = checkZero(second);
+    document.getElementById('showTime').innerHTML = hour + ":" + minute + ":" + second;
+    var t = setTimeout(clock, 500);
+  }
+  function checkZero(i) {
+    if (i < 10) {
+	i = "0" + i;
+	}
+    return i;
+  }
+</script>
+
+
+<body onload="clock()">
+
+<div class="col-sm-12">
+<div class="container-fluid">
+  <h3>What Time is it for SlothPI?</h3>
+
+    
+      <div id="showTime"></div>
+    
+  
+</div>
+</div>
+
+</body>
+</html>

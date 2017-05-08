@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Number Converter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<SCRIPT>
+function converter(n) {
+  document.getElementById("answer2").value = "SlothPI says the answer is: " + n.toString(2);
+  document.getElementById("answer16").value = "SlothPI says the answer is: " + n.toString(16);
+}
+function myFunction() {
+  var number;
+  number = parseInt(document.getElementById("number").value);
+  converter(number);
+}
+</SCRIPT>
+
+<body>
+
+<div class="container-fluid">
+  <h1>Bootstrap Number Converter</h1>
+
+<div class="form-group">
+  <label for="number">Number:</label>
+  <input type="number" class="form-control" id="number">
+</div>
+
+<fieldset disabled>
+<div class="form-group">
+  <label for="answer">Answer Binary:</label>
+  <input type="text" class="form-control" id="answer2" placeholder="SlothPI thinks in Binary">
+</div>
+</fieldset>
+
+<fieldset disabled>
+<div class="form-group">
+  <label for="answer">Answer Hexadecimal:</label>
+  <input type="text" class="form-control" id="answer16" placeholder="Hexadecimal is SlothPIs 2nd nature">
+</div>
+</fieldset>
+
+<div class="form-group">
+  <button type="button" class="btn btn-primary btn-block" id="buttonCalculate" onclick="myFunction()">Ask SlothPI</button>
+</div>
+
+</div>
+  
+</body>
+</html>

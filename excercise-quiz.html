@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Quiz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<SCRIPT>
+function checkQuiz() {
+  alert("10/10 SlothPI would Quiz again");
+}
+</SCRIPT>
+
+<body>
+
+<div class="container-fluid">
+  <h1>Quiz with SlothPI</h1>
+
+
+<label for="question">How old is SlothPI?</label>
+<div class="form-group">
+  <input type="number" class="form-control" id="q1">
+</div>
+  
+ 
+<label for="sel1">Some sort of Question2?</label>
+<div class="form-group"> 
+  <form>
+    <div class="radio">
+      <label><input type="radio" name="optradio">Answer 1</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio">Answer 2</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio">Answer 3</label>
+    </div>
+	<div class="radio">
+      <label><input type="radio" name="optradio">Answer 3</label>
+    </div>
+  </form>
+</div>
+
+<label for="sel2">Some sort of Multiple Choice Question3?</label>
+<div class="checkbox">
+  <label><input type="checkbox" value="">Answer 1</label>
+</div>
+<div class="checkbox">
+  <label><input type="checkbox" value="">Answer 2</label>
+</div>
+<div class="checkbox">
+  <label><input type="checkbox" value="">Answer 3</label>
+</div>
+<div class="checkbox">
+  <label><input type="checkbox" value="">Answer 4</label>
+</div>
+
+<label for="sel3">Some sort of Question4?</label>
+<div class="form-group"> 
+  <select class="form-control" id="q4">
+    <option>Answer 1</option>
+    <option>Answer 2</option>
+    <option>Answer 3</option>
+    <option>Answer 4</option>
+  </select>
+</div>
+
+<div class="form-group">
+  <button type="button" class="btn btn-primary btn-block" id="buttonQuiz" onclick="checkQuiz()">Ask SlothPI</button>
+</div>
+
+</div>
+  
+</body>
+</html>
