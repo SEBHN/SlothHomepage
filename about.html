@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Modern Business - Start Bootstrap Template</title>
+    <title>About</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -36,57 +36,44 @@
 
 <body>
 
-    <!-- Navigation -->
+      <!-- Navigation -->
     <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="container">
-            <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+            <a href="images/SlothPi400x400.png">
+                <img src="images/SlothPi400x400.png" alt="Sloth Logo" width="60" height="60">
+            </a>
+            <a class="navbar-brand" href="index.html">Sloth Homepage</a>
             <div class="collapse navbar-collapse" id="navbarExample">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownExcercises" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Excercises
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownExcercises">
+                            <a class="dropdown-item" href="excercise-clock.html">Clock (Excercise 1)</a>
+                            <a class="dropdown-item" href="excercise-complex.html">Complexe Numbers (Excercise 2)</a>
+                            <a class="dropdown-item" href="excercise-converter.html">Binary/Hex Converter (Excercise 3)</a>
+                            <a class="dropdown-item" href="excercise-nFactorial.html">Factorial (Excercise 4)</a>
+							<a class="dropdown-item" href="excercise-quiz.html">Sloth-Quiz (Excercise 5)</a>
+                            <a class="dropdown-item" href="faultierCanvas.html">Canvas </a>
+							<a class="dropdown-item" href="excercises-ilias.html">Who made what (in ILIAS)?</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About Sloths
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                             <a class="dropdown-item" href="sloth-general.html">General</a>
+                            <a class="dropdown-item" href="sloth-habitat.html">Habitat</a>
+                            <a class="dropdown-item" href="sloth-food.html">Food</a>
+                        </div>
+                    </li>
+					<li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="services.html">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Portfolio
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                            <a class="dropdown-item" href="portfolio-1-col.html">1 Column Portfolio</a>
-                            <a class="dropdown-item" href="portfolio-2-col.html">2 Column Portfolio</a>
-                            <a class="dropdown-item" href="portfolio-3-col.html">3 Column Portfolio</a>
-                            <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
-                            <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Blog
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                            <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
-                            <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
-                            <a class="dropdown-item" href="blog-post.html">Blog Post</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Other Pages
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                            <a class="dropdown-item" href="full-width.html">Full Width Page</a>
-                            <a class="dropdown-item" href="sidebar.html">Sidebar Page</a>
-                            <a class="dropdown-item" href="faq.html">FAQ</a>
-                            <a class="dropdown-item" href="404.html">404</a>
-                            <a class="dropdown-item" href="pricing.html">Pricing Table</a>
-                        </div>
                     </li>
                 </ul>
             </div>
@@ -97,7 +84,7 @@
     <div class="container">
 
         <!-- Page Heading/Breadcrumbs -->
-        <h1 class="mt-4 mb-3">About <small>Subheading</small></h1>
+        <h1 class="mt-4 mb-3">About <small> Our Team and SlothPi </small></h1>
 
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
@@ -107,18 +94,28 @@
         </ol>
 
         <!-- Intro Content -->
-        <div class="row">
-            <div class="col-lg-6">
-                <img class="img-fluid rounded mb-4" src="http://placehold.it/750x450" alt="">
-            </div>
-            <div class="col-lg-6">
-                <h2>About Modern Business</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?</p>
-            </div>
+        <div class="row"><br><br></div>
+      <div class="row">
+        <div class="col">
+            <img width="450" height="450" src="images/SlothPi.png" alt="">
         </div>
-        <!-- /.row -->
+                 
+         <div class="col">
+                 
+            
+             <img with ="450" height="450" style="float:right" src=   "images/SlothPiWhite400x400.png" alt="">
+        </div>
+       
+        </div>    
+         <div class="row"><br><br></div>
+            <div class="row">
+                <center>
+                <h2>About our SlothPi</h2>
+                <p>Deep in the northern jungles of brasil we found a very special little sloth. When we found him, he cuddled really hard with his pi formed bambus branch. It turned out, this  was not just a coincidence. This sloth seems to have a strong preference for maths. The little guy showed us how to convert from Binary numbers to Hex and how to calculate out human ages to sloth ages. For this we named your small friend SlothPi and decided to share all his knoledge with the world. </p>
+                </center>
+            </div>
+
+        <div class="row"><br><br><br><br></div>
 
         <!-- Team Members -->
         <h2>Our Team</h2>
@@ -128,9 +125,9 @@
                 <div class="card h-100 text-center">
                     <img class="card-img-top img-fluid" src="http://placehold.it/750x450" alt="">
                     <div class="card-block">
-                        <h4 class="card-title">Team Member</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Position</h6>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
+                        <h4 class="card-title">Phi Long Tran</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">SEB4</h6>
+                        <p class="card-text">?</p>
                     </div>
                     <div class="card-footer">
                         <a href="#">name@example.com</a>
@@ -141,62 +138,42 @@
                 <div class="card h-100 text-center">
                     <img class="card-img-top img-fluid" src="http://placehold.it/750x450" alt="">
                     <div class="card-block">
-                        <h4 class="card-title">Team Member</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Position</h6>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
+                        <h4 class="card-title">Manuel Wessner</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">SEB4</h6>
+                        <p class="card-text">?</p>
                     </div>
                     <div class="card-footer">
-                        <a href="#">name@example.com</a>
+                        <a href="#">mwessner@stud.hs-heilbronn.de</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 mb-4">
                 <div class="card h-100 text-center">
-                    <img class="card-img-top img-fluid" src="http://placehold.it/750x450" alt="">
+                    <img class="card-img-top img-fluid" src="https://s-media-cache-ak0.pinimg.com/736x/0e/3d/f6/0e3df60cabeec611be2872b82db57458.jpg" alt="">
                     <div class="card-block">
-                        <h4 class="card-title">Team Member</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Position</h6>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
+                        <h4 class="card-title">Johanna Mergler</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">AIB4</h6>
+                        <p class="card-text">Matrikelnummer: 193028</p>
                     </div>
                     <div class="card-footer">
-                        <a href="#">name@example.com</a>
+                        <a href="#">jmergler@stud.hs-heilbronn.de</a>
                     </div>
                 </div>
             </div>
         </div>
         <!-- /.row -->
 
-        <!-- Our Customers -->
-        <h2>Our Customers</h2>
-        <div class="row">
-            <div class="col-lg-2 col-sm-4 mb-4">
-                <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-            </div>
-            <div class="col-lg-2 col-sm-4 mb-4">
-                <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-            </div>
-            <div class="col-lg-2 col-sm-4 mb-4">
-                <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-            </div>
-            <div class="col-lg-2 col-sm-4 mb-4">
-                <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-            </div>
-            <div class="col-lg-2 col-sm-4 mb-4">
-                <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-            </div>
-            <div class="col-lg-2 col-sm-4 mb-4">
-                <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-            </div>
-        </div>
-        <!-- /.row -->
+      
 
     </div>
     <!-- /.container -->
 
+
+     
     <!-- Footer -->
     <footer class="py-5 bg-inverse">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+            <p class="m-0 text-center text-white">Copyright &copy; Sloth Team 2017</p>
         </div>
         <!-- /.container -->
     </footer>
@@ -205,6 +182,7 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/tether/tether.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
 
 </body>
 
