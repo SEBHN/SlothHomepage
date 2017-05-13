@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Sloth Age Converter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<SCRIPT>
+function convert() {
+  var test;
+  test = parseInt(document.getElementById("number").value);
+  if(test < 0) {
+	document.getElementById("answer").value = "SlothPI says: You are pretty young my friend!";
+  } else if(test > 100) {
+    document.getElementById("answer").value = "SlothPI says: Rest in Peace, you won't be forgotten!";
+  }
+  else {
+    var answer = test/5;
+    document.getElementById("answer").value = "SlothPI says: You would be " + answer + " years old as a Sloth!";
+  }
+}
+</SCRIPT>
+
+<body>
+
+<div class="container-fluid">
+  <h1>Age Converting with SlothPI</h1>
+
+<div class="form-group">
+  <label for="number">Your Age:</label>
+  <input type="number" class="form-control" id="number">
+</div>
+
+<fieldset disabled>
+<div class="form-group">
+  <label for="answer">Answer:</label>
+  <input type="text" class="form-control" id="answer" placeholder="SlothPI life expectation is 20years">
+</div>
+</fieldset>
+
+<div class="form-group">
+  <button type="button" class="btn btn-primary btn-block" id="buttonCalculate" onclick="convert()">Ask SlothPI</button>
+</div>
+
+</div>
+  
+</body>
+</html>
