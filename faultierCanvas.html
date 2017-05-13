@@ -1,0 +1,460 @@
+<!doctype html>
+<html>
+<head>
+	<title>Sloth canvas</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <style type="text/css">
+		#card {background-color:#1954ff;
+				border:2px solid black;
+		}
+	</style>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Temporary navbar container fix -->
+    <style>
+    .navbar-toggler {
+        z-index: 1;
+    }
+    
+    @media (max-width: 576px) {
+        nav > .container {
+            width: 100%;
+        }
+    }
+    </style>
+
+
+
+	
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container">
+            <a href="images/SlothPi400x400.png">
+                <img src="images/SlothPi400x400.png" alt="Sloth Logo" width="60" height="60">
+            </a>
+            <a class="navbar-brand" href="index.html">Sloth Homepage</a>
+            <div class="collapse navbar-collapse" id="navbarExample">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownExcercises" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Excercises
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownExcercises">
+                            <a class="dropdown-item" href="excercise-clock.html">Clock (Excercise 1)</a>
+                            <a class="dropdown-item" href="excercise-complex.html">Complexe Numbers (Excercise 2)</a>
+                            <a class="dropdown-item" href="excercise-converter.html">Binary/Hex Converter (Excercise 3)</a>
+                            <a class="dropdown-item" href="excercise-nFactorial.html">Factorial (Excercise 4)</a>
+							<a class="dropdown-item" href="excercise-quiz.html">Sloth-Quiz (Excercise 5)</a>
+							<a class="dropdown-item" href="excercises-ilias.html">Who made what (in ILIAS)?</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About Sloths
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                            <a class="dropdown-item" href="sloth-general.html">General</a>
+                            <a class="dropdown-item" href="sloth-habitat.html">Habitat</a>
+                            <a class="dropdown-item" href="sloth-food.html">Food</a>
+                        </div>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">Sloth chilling on tree</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item">Exercises
+            <li class="breadcrumb-item active">Canvas</li>
+        </ol>
+    <div>
+    <canvas id="card" width="1500px" height="900px">
+	
+	</canvas>
+    </div>
+	<script>
+		var can=document.getElementById("card");
+		var context=can.getContext("2d");
+		
+		context.fillStyle="#ffbc78";
+		context.fillRect(0,800,1500,150);
+		
+
+		
+	   
+        //baum                         //*********************wald
+		context.beginPath();
+		context.moveTo(70,750);
+		context.lineTo(300,500);
+		context.lineTo(530,750);
+		context.fillStyle="#19ff54";
+		context.fill();
+		
+		context.beginPath();
+		context.moveTo(120,600);
+		context.lineTo(300,400);
+		context.lineTo(480,600);
+		context.fillStyle="#19ff54";
+		context.fill();
+		
+		context.beginPath();
+		context.moveTo(200,450);
+		context.lineTo(300,310);
+		context.lineTo(400,450);
+		context.fillStyle="#19ff54";
+		context.fill();
+        //end baum
+		
+        //baumstamm
+		context.fillStyle="#9e1d1d";
+		context.fillRect(275,750,50,150);
+		//end baumbstamm
+		context.restore();
+		context.save();
+        
+        
+        //2. Baum:
+		context.beginPath();
+		context.moveTo(370,750);
+		context.lineTo(600,500);
+		context.lineTo(830,750);
+		context.fillStyle="#19ff54";
+		context.fill();
+		
+		context.beginPath();
+		context.moveTo(420,600);
+		context.lineTo(600,400);
+		context.lineTo(780,600);
+		context.fillStyle="#19ff54";
+		context.fill();
+		
+		context.beginPath();
+		context.moveTo(500,450);
+		context.lineTo(600,310);
+		context.lineTo(700,450);
+		context.fillStyle="#19ff54";
+		context.fill();
+        //end baum?
+		
+        //baumstamm
+		context.fillStyle="#9e1d1d";
+		//context.fillRect(275,750,50,150);
+        context.fillRect(575,750,50,150);
+		//end baumbstamm
+		context.restore();
+		context.save();
+        
+        //faultier bild                         //************faultier
+        var image = new Image();
+        image.src = 'images/faultier.png';
+        image.onload = function(){
+           // context.drawImage(image, 350, 450, 220, 160);    //relativ perfekt :)
+             context.drawImage(image, 360, 450, 210, 150);
+        }
+        //context.drawImage(image, 500, 450);
+        context.restore();
+        context.save();
+        //end faultier bild 
+        
+        
+        //hütte                                     //***************hütte
+        context.fillStyle="#c04700";
+        //x von links, y von oben, width, heigt
+                    // x     y   wid  hig
+		context.fillRect(1000, 550, 400, 300);
+		context.restore();
+		context.save();
+        
+        //dachfarbe: #714125
+        context.beginPath();
+		context.moveTo(970,560);
+		context.lineTo(1200,390);
+		context.lineTo(1430,560);
+		context.fillStyle="#714125";
+		context.fill();
+        
+        //fenster: #dad6a7
+        context.fillStyle="#dad6a7";
+		context.fillRect(1050, 620, 100, 100);
+		context.restore();
+		context.save();
+        
+        context.fillStyle="#714125";
+		context.fillRect(1090, 620, 20, 100);
+		context.restore();
+		context.save();
+        
+        context.fillStyle="#714125";
+		context.fillRect(1050, 660, 100, 20);
+		context.restore();
+		context.save();
+        
+        
+        //türe:
+        context.fillStyle="#714125";
+		context.fillRect(1240, 610, 110, 240);
+		context.restore();
+		context.save();
+        
+        //türknauf:
+        context.beginPath();
+		context.arc(1340, 725, 4, 0, 2 * Math.PI, false); 
+		context.fillStyle = "Yellow";
+		context.fill();
+		context.save();
+        
+        //holz bild 
+        var holz = new Image();
+        holz.src = 'images/holz.png';
+        holz.onload = function(){
+             context.drawImage(holz, 1000, 750, 190, 140);
+        }
+        //context.drawImage(image, 500, 450);
+        context.restore();
+        context.save();
+        //end holz bild 
+        
+        
+        // rechte wolke:    	                               //********wolken
+        context.beginPath();
+        context.moveTo(570, 130);
+        context.bezierCurveTo(530, 150, 500, 200, 630, 200);
+        context.bezierCurveTo(650, 230, 720, 230, 740, 200);
+        context.bezierCurveTo(820, 200, 820, 180, 790, 150);
+        context.bezierCurveTo(830, 90, 770, 80, 740, 120);
+        context.bezierCurveTo(720, 55, 650, 70, 650, 120);
+        context.bezierCurveTo(600, 55, 550, 70, 570, 130);
+        context.closePath();
+        context.lineWidth = 4;
+        context.fillStyle = '#faf8f4';
+        context.fill();
+        context.strokeStyle = '#c6d2ff';
+        context.stroke();
+       
+        //linke wolke
+        context.beginPath();
+        context.moveTo(170, 80);
+        context.bezierCurveTo(130, 100, 130, 150, 230, 150);
+        context.bezierCurveTo(250, 180, 320, 180, 340, 150);
+        context.bezierCurveTo(420, 150, 420, 120, 390, 100);
+        context.bezierCurveTo(430, 40, 370, 30, 340, 50);
+        context.bezierCurveTo(320, 5, 250, 20, 250, 50);
+        context.bezierCurveTo(200, 5, 150, 20, 170, 80);
+        context.closePath();
+        context.lineWidth = 4;
+        context.fillStyle = '#faf8f4';
+        context.fill();
+        context.strokeStyle = '#c6d2ff';
+        context.stroke();
+	
+        
+        
+        //sonne :)                               //****************sonne
+        context.beginPath();
+		context.arc(1410, 50, 60, 0, 2 * Math.PI, false); 
+		context.fillStyle = "Yellow";
+		context.fill();
+		context.save();
+        
+        //links 3
+        context.beginPath();
+		context.arc(1335, 60, 12, 0, 2 * Math.PI, false); 
+		context.fillStyle = "Yellow";
+		context.fill();
+		context.save();
+        context.beginPath();
+		context.arc(1310, 65, 8, 0, 2 * Math.PI, false); 
+		context.fillStyle = "Yellow";
+		context.fill();
+		context.save();
+        context.beginPath();
+		context.arc(1290, 70, 6, 0, 2 * Math.PI, false); 
+		context.fillStyle = "Yellow";
+		context.fill();
+		context.save();
+        
+        //oben links 2
+        context.beginPath();
+		context.arc(1341, 15, 12, 0, 2 * Math.PI, false); 
+		context.fillStyle = "Yellow";
+		context.fill();
+		context.save();
+        context.beginPath();
+		context.arc(1314, 7, 8, 0, 2 * Math.PI, false); 
+		context.fillStyle = "Yellow";
+		context.fill();
+		context.save();
+        
+        //unten links 3
+        context.beginPath();
+		context.arc(1370, 115, 12, 0, 2 * Math.PI, false); 
+		context.fillStyle = "Yellow";
+		context.fill();
+		context.save();
+        context.beginPath();
+		context.arc(1352, 135, 8, 0, 2 * Math.PI, false); 
+		context.fillStyle = "Yellow";
+		context.fill();
+		context.save();
+        context.beginPath();
+		context.arc(1336, 152, 6, 0, 2 * Math.PI, false); 
+		context.fillStyle = "Yellow";
+		context.fill();
+		context.save();
+        
+        //unten rechts 3
+        context.beginPath();
+		context.arc(1435, 122, 12, 0, 2 * Math.PI, false); 
+		context.fillStyle = "Yellow";
+		context.fill();
+		context.save();
+        context.beginPath();
+		context.arc(1445, 146, 8, 0, 2 * Math.PI, false); 
+		context.fillStyle = "Yellow";
+		context.fill();
+		context.save();
+        context.beginPath();
+		context.arc(1453, 168, 6, 0, 2 * Math.PI, false); 
+		context.fillStyle = "Yellow";
+		context.fill();
+		context.save();
+        
+        //unten rechts 2
+        context.beginPath();
+		context.arc(1476, 89, 12, 0, 2 * Math.PI, false); 
+		context.fillStyle = "Yellow";
+		context.fill();
+		context.save();
+        context.beginPath();
+		context.arc(1495, 109, 8, 0, 2 * Math.PI, false); 
+		context.fillStyle = "Yellow";
+		context.fill();
+		context.save();
+        
+        //oben rechts 1
+        context.beginPath();
+		context.arc(1483, 30, 12, 0, 2 * Math.PI, false); 
+		context.fillStyle = "Yellow";
+		context.fill();
+		context.save();
+        
+       
+        //blume                                        //***************blumen  
+        
+        //context.fillStyle = "red";
+        //context.stroke(127, 63, 120);
+        /// A design for a simple flower
+        //context.translate(580, 200);
+        //context.noStroke();
+        //for (var i = 0; i < 10; i ++) {
+            //context.ellipse(0, 30, 20, 80);
+            //context.rotate(Math.PI/5);
+        //}
+        
+       
+        context.fillStyle="green";
+		context.fillRect(1435, 820, 8, 60);
+		context.restore();
+		context.save();
+        context.beginPath();
+        //blätter
+		context.moveTo(1435,855);
+		context.lineTo(1435,865);
+		context.lineTo(1420,852);
+		context.fillStyle="green";
+		context.fill();
+        context.beginPath();
+		context.moveTo(1443,855);
+		context.lineTo(1443,865);
+		context.lineTo(1458,852);
+		context.fillStyle="green";
+		context.fill();
+        //büte
+        context.beginPath();
+		context.arc(1439, 810, 10, 0, 2 * Math.PI, false); 
+		context.fillStyle = "red";
+		context.fill();
+		context.save();
+        context.arc(1450, 815, 10, 0, 2 * Math.PI, false); 
+		context.fillStyle = "red";
+		context.fill();
+		context.save();
+        context.arc(1447, 830, 10, 0, 2 * Math.PI, false); 
+		context.fillStyle = "red";
+		context.fill();
+		context.save();
+        context.arc(1435, 829, 10, 0, 2 * Math.PI, false); 
+		context.fillStyle = "red";
+		context.fill();
+		context.save();
+        context.arc(1430, 820, 10, 0, 2 * Math.PI, false); 
+		context.fillStyle = "red";
+		context.fill();
+		context.save();
+        context.closePath();
+        context.arc(1439, 826, 10, 0, 2 * Math.PI, false); 
+        //context.shadowColor = "yellow";
+		//context.fillStyle = "yellow";
+		context.fill();
+		context.save();
+        
+        
+        //biene bild 
+        var biene = new Image();
+        biene.src = 'images/biene.png';
+        biene.onload = function(){
+             context.drawImage(biene, 1419, 810, 35, 30);
+        }
+        context.restore();
+        context.save();
+        
+        
+
+
+		
+		
+	</script>
+    
+     
+    <!-- Footer -->
+    <footer class="py-5 bg-inverse">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Sloth Team 2017</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/tether/tether.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
