@@ -35,7 +35,9 @@ function converter(n) {
 function myFunction() {
   var number;
   number = parseInt(document.getElementById("number").value);
-  converter(number);
+  if(!isNaN(number)) {
+    converter(number);
+  }
 }
 </SCRIPT>
 
