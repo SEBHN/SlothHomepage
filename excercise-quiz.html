@@ -28,8 +28,33 @@
 </head>
 
 <SCRIPT>
+var correct = 0;
 function checkQuiz() {
-  alert("10/10 SlothPI would Quiz again");
+  var q1 = parseInt(document.getElementById("q1").value);
+  var q2a1 = document.getElementById("q2a1").checked;
+  var q2a2 = document.getElementById("q2a2").checked;
+  var q2a3 = document.getElementById("q2a3").checked;
+  var q2a4 = document.getElementById("q2a4").checked;
+  var q3a1 = document.getElementById("q3a1").checked;
+  var q3a2 = document.getElementById("q3a2").checked;
+  var q3a3 = document.getElementById("q3a3").checked;
+  var q3a4 = document.getElementById("q3a4").checked;
+  var q3a5 = document.getElementById("q3a5").checked;
+  var q4 = document.getElementById("q4").value;
+  if(q1==3||q1==2) {
+    correct++;
+  }
+  if(q2a4) {
+    correct++;
+  }
+  if(q3a1&q3a2&q3a3&q3a4&q3a5) {
+   correct++
+  }
+  if(q4==3) {
+    correct++;
+  }
+  alert("You have " + correct + "/4 correct! SlothPI would Quiz again");
+  correct = 0;
 }
 </SCRIPT>
 
@@ -91,51 +116,54 @@ function checkQuiz() {
   <h1>Quiz with SlothPI</h1>
 
 
-<label for="question">How old is SlothPI?</label>
+<label for="question">How many toes do I have?</label>
 <div class="form-group">
   <input type="number" class="form-control" id="q1">
 </div>
   
  
-<label for="sel1">Some sort of Question2?</label>
+<label for="sel1">What is my life expectation as a Sloth?</label>
 <div class="form-group"> 
   <form>
     <div class="radio">
-      <label><input type="radio" name="optradio">Answer 1</label>
+      <label><input type="radio" name="optradio" id="q2a1">5 years</label>
     </div>
     <div class="radio">
-      <label><input type="radio" name="optradio">Answer 2</label>
+      <label><input type="radio" name="optradio" id="q2a2">10 years</label>
     </div>
     <div class="radio">
-      <label><input type="radio" name="optradio">Answer 3</label>
+      <label><input type="radio" name="optradio" id="q2a3">15 years</label>
     </div>
 	<div class="radio">
-      <label><input type="radio" name="optradio">Answer 3</label>
+      <label><input type="radio" name="optradio" id="q2a4">20 years</label>
     </div>
   </form>
 </div>
 
-<label for="sel2">Some sort of Multiple Choice Question3?</label>
+<label for="sel2">What kind of math can I do?</label>
 <div class="checkbox">
-  <label><input type="checkbox" value="">Answer 1</label>
+  <label><input type="checkbox" value="" id="q3a1">Complex Numbers</label>
 </div>
 <div class="checkbox">
-  <label><input type="checkbox" value="">Answer 2</label>
+  <label><input type="checkbox" value="" id="q3a2">Factorial</label>
 </div>
 <div class="checkbox">
-  <label><input type="checkbox" value="">Answer 3</label>
+  <label><input type="checkbox" value="" id="q3a3">Binary Conversion</label>
 </div>
 <div class="checkbox">
-  <label><input type="checkbox" value="">Answer 4</label>
+  <label><input type="checkbox" value="" id="q3a4">Hexadecimal Conversion</label>
+</div>
+<div class="checkbox">
+  <label><input type="checkbox" value="" id="q3a5">Age Conversion</label>
 </div>
 
-<label for="sel3">Some sort of Question4?</label>
+<label for="sel3">What can't I do?</label>
 <div class="form-group"> 
-  <select class="form-control" id="q4">
-    <option>Answer 1</option>
-    <option>Answer 2</option>
-    <option>Answer 3</option>
-    <option>Answer 4</option>
+  <select class="form-control" id="q4">   
+	<option value="1">Asking you Questions</option>
+    <option value="2">Doing Math</option>
+    <option value="3">Hunting animals</option>
+	<option value="4">Showing you the time</option>
   </select>
 </div>
 
