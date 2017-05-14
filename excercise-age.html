@@ -35,6 +35,7 @@ function convert() {
 	document.getElementById("answer").value = "SlothPI says: You are pretty young my friend!";
   } else if(test > 100) {
     document.getElementById("answer").value = "SlothPI says: Rest in Peace, you won't be forgotten!";
+  } else if(isNaN(test)) {
   }
   else {
     var answer = test/5;
