@@ -42,6 +42,22 @@ function complex() {
    var im1 = parseFloat(document.getElementById("imaginaryNumber1").value);
    var rn2 = parseFloat(document.getElementById("realNumber2").value);
    var im2 = parseFloat(document.getElementById("imaginaryNumber2").value);
+   if(isNaN(rn1)) {
+	rn1 = 0;
+	document.getElementById("realNumber1").value = 0;
+   }
+   if(isNaN(im1)) {
+	im1 = 0;
+	document.getElementById("imaginaryNumber1").value = 0;
+   }
+   if(isNaN(rn2)) {
+	rn2 = 0;
+	document.getElementById("realNumber2").value = 0;
+   }
+   if(isNaN(im2)) {
+	im2 = 0;
+	document.getElementById("imaginaryNumber2").value = 0;
+   }
    var result;
    if(addition) {
      var rn = rn1 + rn2;
