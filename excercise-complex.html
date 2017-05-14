@@ -105,7 +105,11 @@ function complex() {
 	 op="+";
 	 }
 	 result = "" + rn + op + im +"i";
-	 document.getElementById("answer").value = "SlothPI says the answer is: " + result;
+	 if(!isNaN(rn)&&!isNaN(im)) {
+	 	 document.getElementById("answer").value = "SlothPI says the answer is: " + result;
+	 } else {
+		document.getElementById("answer").value = "Even SlothPI can't divide by zero!"
+	 }
    }
 }
 </SCRIPT>
